@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Average of 10</title>
+</head>
+<body>
+    <h1>To  find the average of 10 numbers</h1>
+    
+    >
+    <button onclick="average()">FIND THE AVERAGE</button>
+    <h6 id="result"></h6>
+    <script>
+        function average(){
+            var numbers = [];
+
+            for(i=0;i<10;i++){
+                var number = parseFloat(prompt("Enter the number"));
+                numbers.push(number);
+            }
+            var sum=0;
+            for(i=0;i<10;i++){
+                sum+=numbers[i];
+            }
+            var avrg=sum/numbers.length;
+            document.getElementById("result").innerHTML= "The average is : "+ avrg;
+
+        }
+        
+        
+    </script>
+</body>
+</html>

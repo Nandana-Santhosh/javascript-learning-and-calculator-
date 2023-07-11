@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events</title>
+    <style>
+        body {
+            background-color: #fff; /* Initial background color */
+        }
+    </style>
+    <script>
+        function displayMessage(message) {
+            document.getElementById("status").innerText = message;
+        }
+
+        function changeBackgroundColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function displayCurrentDate() {
+            var currentDate = new Date();
+            document.getElementById("date").innerText = currentDate.toDateString();
+        }
+    </script>
+</head>
+<body onmouseover="displayMessage('You are in')" onmouseout="displayMessage('You are out')">
+    <h1>Mouse Events</h1>
+    <p id="status">Move your mouse over this page.</p>
+
+    <button onclick="displayCurrentDate()">Show Current Date</button>
+    <p id="date"></p>
+
+    <script>
+        // Change background color on mouse over
+        document.body.onmouseover = function() {
+            changeBackgroundColor("blue"); // Change to desired color
+        };
+
+        // Reset background color on mouse out
+        document.body.onmouseout = function() {
+            changeBackgroundColor("#fff"); // Change to initial background color
+        };
+    </script>
+</body>
+</html>

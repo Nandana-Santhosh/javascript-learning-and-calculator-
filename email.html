@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Check email</title>
+</head>
+<body>
+    <h1>Email Address Validation</h1>
+    <p id="q"></p>
+
+    <script>
+        var emailid = prompt("Enter an email");
+        function validateEmail(chakka){
+            var pattern=/^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            
+             return pattern.test(chakka);
+
+        }
+    ans=validateEmail(emailid);
+if (ans) {
+    document.getElementById("q").innerHTML="Valid email";
+  
+} else {
+    document.getElementById("q").innerHTML="Not Valid email";
+}
+    </script>
+    
+</body>
+</html>
